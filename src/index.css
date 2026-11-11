@@ -1,0 +1,230 @@
+:root {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #203b39;
+  background: #f5f8f7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 360px; min-height: 100vh; }
+button, input { font: inherit; }
+a { color: inherit; text-decoration: none; }
+
+.app-shell { display: flex; min-height: 100vh; }
+.sidebar { width: 248px; flex: 0 0 248px; background: #fff; border-right: 1px solid #e7eeeb; display: flex; flex-direction: column; padding: 27px 15px 16px; }
+.brand { display: flex; align-items: center; gap: 11px; padding: 0 11px; }
+.brand-mark { width: 37px; height: 37px; border-radius: 12px; background: #e5f4f0; color: #137c72; display: grid; place-items: center; }
+.brand-mark svg { font-size: 22px; }
+.brand strong { display: block; font-family: 'Segoe UI', Arial, sans-serif; font-size: 18px; letter-spacing: -.7px; color: #21423c; line-height: 1.15; }
+.brand small { display: block; margin-top: 3px; font-size: 8px; letter-spacing: 1.1px; color: #80928d; font-weight: 700; }
+.workspace-label { margin: 45px 11px 12px; color: #9aa8a4; font-size: 9px; font-weight: 750; letter-spacing: 1.2px; }
+.side-nav { display: grid; gap: 5px; }
+.nav-link { display: flex; align-items: center; gap: 13px; padding: 11px 12px; border-radius: 9px; color: #71817e; font-weight: 550; font-size: 13px; transition: .15s ease; }
+.nav-link svg { font-size: 19px; }
+.nav-link:hover { color: #137c72; background: #f5faf8; }
+.nav-link.active { background: #eaf5f2; color: #137c72; font-weight: 700; }
+.nav-count { margin-left: auto; display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; font-size: 10px; background: white; color: #137c72; }
+.sidebar-bottom { margin-top: auto; }
+.support-card { padding: 15px; border-radius: 12px; margin: 0 2px 20px; background: linear-gradient(145deg,#eff8f5,#f7faf8); border: 1px solid #e8f1ee; }
+.support-icon { color: #368b7b; margin-bottom: 9px; }
+.support-icon svg { font-size: 20px; }
+.support-card strong { display: block; font-size: 12px; }
+.support-card p { margin: 5px 0 0; font-size: 11px; line-height: 1.6; color: #758681; }
+.user-mini { display: flex; align-items: center; gap: 9px; border-top: 1px solid #edf1ef; padding: 15px 7px 0; }
+.user-mini strong { display: block; font-size: 12px; }
+.user-mini small { display: block; margin-top: 2px; font-size: 10px; color: #84928f; }
+.main-area { min-width: 0; flex: 1; }
+.topbar { height: 67px; padding: 0 4.1%; display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,.82); border-bottom: 1px solid #e9efed; }
+.breadcrumb { display: flex; gap: 8px; align-items: center; font-size: 11px; color: #899793; }
+.breadcrumb svg { font-size: 13px; }
+.breadcrumb strong { color: #46605b; font-weight: 600; }
+.top-actions { display: flex; align-items: center; gap: 8px; }
+.top-actions .MuiIconButton-root { color: #788984; }
+.environment-tag { padding: 6px 9px; border-radius: 5px; color: #5e8a7f; background: #edf6f3; font-size: 8px; letter-spacing: .9px; font-weight: 750; margin-right: 8px; }
+.page-wrap { max-width: 1470px; margin: 0 auto; padding: 34px 4.1% 55px; }
+.page-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 25px; margin-bottom: 26px; }
+.page-heading h4 { font-family: 'Segoe UI', Arial, sans-serif; font-size: clamp(24px, 2.45vw, 31px); }
+.eyebrow { color: #7e9b94; font-size: 9px; font-weight: 750; letter-spacing: 1.25px; margin-bottom: 8px; }
+.metric-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 15px; margin-bottom: 18px; }
+.metric-card .MuiCardContent-root { padding: 19px 19px 17px; }
+.metric-icon { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; margin-bottom: 15px; }
+.metric-icon svg { font-size: 18px; }
+.metric-icon.mint { color: #258575; background: #e7f5f1; }
+.metric-icon.blue { color: #527ba9; background: #edf3fa; }
+.metric-icon.amber { color: #bd8a38; background: #fbf3e5; }
+.metric-icon.rose { color: #b46b6f; background: #f8eeee; }
+.metric-label { color: #74837f; font-size: 11px; font-weight: 600; }
+.metric-value { margin-top: 5px; font-family: 'Segoe UI', Arial, sans-serif; font-size: 29px; font-weight: 750; line-height: 1.1; color: #203b39; }
+.metric-note { margin-top: 6px; color: #9aa6a3; font-size: 10px; }
+.dashboard-grid { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(245px, .82fr); gap: 17px; }
+.section-card-content { padding: 21px 0 10px !important; }
+.section-heading { padding: 0 21px 17px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.section-heading .MuiTypography-h6,.table-toolbar .MuiTypography-h6 { font-size: 15px; }
+.section-heading .MuiTypography-body2,.table-toolbar .MuiTypography-body2 { margin-top: 3px; font-size: 11px; }
+.section-heading .MuiButton-root { font-size: 11px; }
+.data-grid-wrap { width: 100%; }
+.metric-grid .MuiCard-root,.dashboard-grid .MuiCard-root,.workflow-card,.table-card-content { overflow: hidden; }
+.status-chip { font-size: 10px !important; height: 24px !important; font-weight: 650 !important; }
+.status-approved { color: #2a805f !important; background: #eaf5ef !important; }
+.status-pending { color: #9b702a !important; background: #fbf3e3 !important; }
+.status-specialist { color: #765a9c !important; background: #f1ecf7 !important; }
+.status-clarification { color: #a45b54 !important; background: #fbefed !important; }
+.status-draft { color: #788480 !important; background: #eef1f0 !important; }
+.risk-value { font-weight: 750; font-size: 13px; color: #456b62; }
+.risk-value small { color: #98a5a1; font-size: 9px; font-weight: 500; margin-left: 2px; }
+.risk-high { color: #bd7554; }
+.owner-cell { display: flex; align-items: center; gap: 7px; font-size: 11px; }
+.table-link { border: 0; background: none; padding: 0; color: #256c61; cursor: pointer; font-weight: 650; font-size: 11px; text-align: left; }
+.table-link:hover { text-decoration: underline; }
+.review-summary .MuiCardContent-root { padding: 21px; }
+.summary-top { display: flex; align-items: center; justify-content: space-between; }
+.summary-icon { width: 37px; height: 37px; display: grid; place-items: center; color: #b58335; background: #faf2e3; border-radius: 10px; }
+.attention-chip { color: #a17a3b !important; background: #fbf4e7 !important; font-size: 8px !important; letter-spacing: .55px; font-weight: 750 !important; }
+.review-summary .MuiTypography-h6 { font-size: 15px; }
+.review-summary .MuiTypography-body2 { line-height: 1.6; font-size: 11px; }
+.summary-stat { display: flex; align-items: center; justify-content: space-between; padding: 13px 0; margin: 15px 0; border-top: 1px solid #edf1ef; border-bottom: 1px solid #edf1ef; font-size: 11px; color: #76847f; }
+.summary-stat strong { font-family: 'Segoe UI', Arial, sans-serif; font-size: 21px; color: #243f3a; }
+.review-summary .MuiButton-root { font-size: 11px; }
+.workflow-card { margin-top: 18px; }
+.workflow-card .MuiCardContent-root { padding: 20px 21px; }
+.soft-chip { color: #418173 !important; background: #eaf5f2 !important; font-size: 10px !important; }
+.soft-chip .MuiChip-icon { color: #418173; }
+.workflow-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 9px; margin-top: 13px; }
+.workflow-step { display: flex; align-items: center; gap: 10px; padding: 12px 10px; border-radius: 9px; background: #f8faf9; }
+.workflow-step > span { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 8px; background: #e6f3ef; color: #2d8477; font-size: 10px; font-weight: 750; }
+.workflow-step strong { display: block; font-size: 10px; }
+.workflow-step small { display: block; margin-top: 3px; color: #87948f; font-size: 9px; }
+.table-card-content { padding: 0 0 12px !important; }
+.table-toolbar { padding: 21px 21px 17px; display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+.table-toolbar .MuiTextField-root { width: 220px; }
+.table-toolbar .MuiInputBase-root { font-size: 11px; }
+.wizard-back { margin: -11px 0 13px; }
+.wizard-back .MuiButton-root { font-size: 11px; }
+.wizard-card { max-width: 970px; margin: auto; }
+.wizard-card > .MuiCardContent-root { padding: 28px 34px; }
+.wizard-stepper .MuiStepLabel-label { font-size: 10px; margin-top: 5px; color: #87938f; }
+.wizard-stepper .MuiStepLabel-label.Mui-active,.wizard-stepper .MuiStepLabel-label.Mui-completed { color: #347b70; font-weight: 700; }
+.wizard-stepper .MuiStepIcon-root.Mui-active,.wizard-stepper .MuiStepIcon-root.Mui-completed { color: #39877b; }
+.wizard-stepper .MuiStepConnector-line { border-color: #e6eeeb; }
+.wizard-content { max-width: 740px; margin: 0 auto; }
+.step-panel { min-height: 350px; }
+.step-icon { width: 39px; height: 39px; display: grid; place-items: center; color: #358579; background: #e8f5f1; border-radius: 11px; margin-bottom: 15px; }
+.step-icon svg { font-size: 20px; }
+.step-panel h5 { font-family: 'Segoe UI', Arial, sans-serif; font-size: 21px; }
+.step-panel > .MuiTypography-body1 { font-size: 12px; line-height: 1.7; }
+.form-stack { display: grid; gap: 17px; max-width: 610px; margin-top: 26px; }
+.form-stack .MuiInputBase-root { font-size: 12px; }
+.selection-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+.selection-card { min-height: 48px; display: flex; align-items: center; text-align: left; gap: 11px; padding: 10px 12px; border: 1px solid #e5ece9; border-radius: 9px; color: #50635f; background: #fff; cursor: pointer; transition: .15s ease; font-size: 11px; font-weight: 550; }
+.selection-card:hover { border-color: #8abbb0; background: #fbfdfc; }
+.selection-card.selected { border-color: #65a89b; background: #eff8f5; color: #256e62; }
+.selection-check { display: grid; place-items: center; width: 19px; height: 19px; border-radius: 6px; border: 1px solid #dfe8e5; font-size: 12px; color: #8a9b96; flex: 0 0 19px; }
+.selected .selection-check { border-color: #74aa9e; background: #318578; color: white; }
+.wizard-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 22px; padding-top: 17px; border-top: 1px solid #edf1ef; }
+.wizard-footer .MuiButton-root { font-size: 11px; }
+.wizard-footer-right { display: flex; gap: 8px; }
+.hazard-editor { border: 1px solid #e8eeec; border-radius: 10px; overflow: hidden; }
+.hazard-row { display: grid; grid-template-columns: minmax(150px,1.3fr) minmax(150px,1fr) minmax(135px,.9fr) 40px; align-items: center; gap: 10px; padding: 10px 12px; border-bottom: 1px solid #edf1ef; }
+.hazard-row:last-child { border-bottom: 0; }
+.hazard-title { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.hazard-title strong { font-size: 11px; }
+.hazard-title small { color: #9aa7a3; font-size: 9px; margin-left: auto; white-space: nowrap; }
+.hazard-bullet { width: 7px; height: 7px; background: #61a294; border-radius: 50%; flex: 0 0 7px; }
+.hazard-row .MuiInputBase-root { font-size: 10px; }
+.hazard-row .MuiSelect-select { padding-top: 9px; padding-bottom: 9px; }
+.hazard-score { justify-self: center; min-width: 27px; padding: 5px; border-radius: 6px; text-align: center; font-weight: 700; font-size: 11px; background: #f0f3f2; color: #72817d; }
+.hazard-score.positive { color: #ae7641; background: #fbf2e7; }
+.hazard-score.negative { color: #34846f; background: #eaf5ef; }
+.risk-total { display: flex; align-items: center; justify-content: flex-end; gap: 17px; margin-top: 12px; padding: 13px 15px; background: #f3f8f6; border-radius: 9px; color: #657771; font-size: 11px; }
+.risk-total strong { color: #266d61; font-family: 'Segoe UI', Arial, sans-serif; font-size: 21px; }
+.review-summary-grid { display: grid; gap: 17px; }
+.review-summary-grid > div:not(.recommendation-preview) { padding-bottom: 13px; border-bottom: 1px solid #edf1ef; }
+.summary-label { display: block; color: #83938e; font-size: 9px; letter-spacing: .75px; font-weight: 750; margin-bottom: 7px; }
+.review-summary-grid > div > strong { display: block; font-size: 14px; }
+.review-summary-grid > div > p { margin: 5px 0 0; font-size: 11px; color: #75837f; }
+.chips-wrap { display: flex; flex-wrap: wrap; gap: 6px; color: #81908c; font-size: 11px; }
+.chips-wrap .MuiChip-root { font-size: 10px; }
+.assessment-metrics { display: flex; gap: 34px; margin-top: 15px; }
+.assessment-metrics span { display: grid; gap: 3px; }
+.assessment-metrics small { color: #82918d; font-size: 10px; }
+.assessment-metrics strong { font-family: 'Segoe UI', Arial, sans-serif; font-size: 19px; color: #326f64; }
+.recommendation-preview { background: #f5faf8; border: 1px solid #e8f1ed; border-radius: 9px; padding: 14px; }
+.recommendation-line { display: flex; gap: 8px; align-items: flex-start; margin: 9px 0; color: #5f706a; font-size: 11px; line-height: 1.55; }
+.recommendation-line svg { flex: 0 0 15px; margin-top: 1px; color: #4a9a87; font-size: 15px; }
+.details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.details-grid .MuiCardContent-root { padding: 20px; }
+.details-grid .MuiTypography-h6 { font-size: 15px; }
+.detail-block { margin-top: 20px; }
+.detail-block .summary-label { margin-bottom: 9px; }
+.review-banner { display: flex; gap: 13px; align-items: center; padding: 15px 18px; border-radius: 11px; background: #fcf8ef; border: 1px solid #f1e7d2; margin-bottom: 17px; }
+.review-banner .summary-icon { flex: 0 0 37px; }
+.review-banner strong { font-size: 12px; }
+.review-banner p { margin: 4px 0 0; color: #837a67; font-size: 10px; }
+.grid-profile-name { color: #326f64; font-size: 11px; }
+.dialog-profile-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; font-size: 11px; color: #71817c; }
+.dialog-profile-meta strong { color: #2a574e; margin-left: 4px; }
+.dialog-profile-summary { display: grid; gap: 14px; padding: 14px; margin-bottom: 14px; border-radius: 9px; background: #f8faf9; }
+.dialog-profile-summary p { margin: 0; color: #65756f; font-size: 11px; line-height: 1.55; }
+.dialog-actions { padding: 14px 20px !important; }
+.dialog-actions .MuiButton-root { font-size: 11px; }
+.hazard-catalog { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+.hazard-catalog .MuiCardContent-root { padding: 17px; }
+.catalog-card-top { display: flex; justify-content: space-between; align-items: center; }
+.catalog-icon { width: 33px; height: 33px; display: grid; place-items: center; border-radius: 9px; background: #eef6f3; color: #4a8f81; }
+.catalog-icon svg { font-size: 18px; }
+.hazard-catalog .MuiTypography-h6 { font-size: 14px; }
+.catalog-label { margin-top: 14px; margin-bottom: 4px; color: #8b9b96; font-size: 8px; letter-spacing: .8px; font-weight: 750; }
+.hazard-catalog .MuiTypography-body2 { font-size: 10px; line-height: 1.6; }
+.mobile-menu { display: none !important; }
+
+@media (max-width: 1080px) {
+  .sidebar { width: 215px; flex-basis: 215px; }
+  .page-wrap { padding-left: 3%; padding-right: 3%; }
+  .dashboard-grid { grid-template-columns: minmax(0,1.6fr) minmax(220px,.8fr); gap: 12px; }
+  .hazard-catalog { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 820px) {
+  .sidebar { position: fixed; z-index: 20; inset: 0 auto 0 0; transform: translateX(-100%); transition: transform .2s ease; box-shadow: 5px 0 24px rgba(20,50,45,.1); }
+  .sidebar.sidebar-open { transform: translateX(0); }
+  .mobile-menu { display: inline-flex !important; margin-left: -10px !important; margin-right: 9px !important; }
+  .topbar { justify-content: flex-start; }
+  .top-actions { margin-left: auto; }
+  .environment-tag { display: none; }
+  .metric-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .dashboard-grid { grid-template-columns: 1fr; }
+  .workflow-steps { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 600px) {
+  .page-wrap { padding: 25px 15px 40px; }
+  .topbar { height: 58px; padding: 0 14px; }
+  .breadcrumb { font-size: 9px; }
+  .top-actions { gap: 0; }
+  .top-actions .MuiIconButton-root { padding: 7px; }
+  .page-heading { align-items: flex-start; flex-direction: column; gap: 15px; }
+  .page-heading h4 { font-size: 24px; }
+  .page-heading > .MuiButton-root { align-self: stretch; }
+  .metric-grid { gap: 10px; }
+  .metric-card .MuiCardContent-root { padding: 14px; }
+  .metric-value { font-size: 25px; }
+  .metric-note { font-size: 9px; }
+  .workflow-steps { grid-template-columns: 1fr 1fr; }
+  .workflow-card .MuiCardContent-root { padding: 16px; }
+  .section-heading { padding-inline: 15px; }
+  .section-heading .soft-chip { display: none; }
+  .wizard-card > .MuiCardContent-root { padding: 19px 15px; }
+  .wizard-stepper .MuiStepLabel-label { display: none; }
+  .wizard-stepper .MuiStepLabel-iconContainer { padding: 0; }
+  .selection-grid { grid-template-columns: 1fr; }
+  .hazard-row { grid-template-columns: minmax(100px,1fr) minmax(105px,1fr) 32px; gap: 6px; padding: 9px 7px; }
+  .hazard-title { grid-column: 1 / -1; }
+  .hazard-title small { margin-left: auto; }
+  .hazard-row .MuiInputBase-root { font-size: 9px; }
+  .hazard-row .MuiSelect-select { padding-left: 8px; padding-right: 22px !important; }
+  .details-grid { grid-template-columns: 1fr; }
+  .hazard-catalog { grid-template-columns: 1fr; }
+  .table-toolbar { align-items: flex-start; flex-direction: column; }
+  .table-toolbar .MuiTextField-root { width: 100%; }
+  .dialog-actions { flex-wrap: wrap; }
+  .dialog-actions .MuiButton-root { padding-inline: 8px; font-size: 10px; }
+}
